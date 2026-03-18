@@ -12,23 +12,6 @@ app.get('/', (req, res) => {
 	res.json({ message: 'Welcome to the Blog Post API' });
 });
 
-// 404 handler for undefined routes
-app.use((req, res) => {
-	res.status(404).json({
-		error: 'Not Found',
-		message: `Route ${req.method} ${req.path} not found.`,
-	});
-});
-
-// Error handling middleware
-app.use((err, req, res, next) => {
-	console.error(err.stack);
-	res.status(500).json({
-		error: 'Internal Server Error',
-		message: 'Something went wrong on the server.',
-	});
-});
-
 // Start the server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
