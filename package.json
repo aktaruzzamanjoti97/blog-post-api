@@ -1,0 +1,23 @@
+{
+  "name": "blog-post-api",
+  "version": "1.0.0",
+  "description": "A simple Blog Post API using Express.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node test-api.js"
+  },
+  "keywords": [
+    "blog",
+    "api",
+    "express"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1",
+    "joi": "^18.0.2"
+  }
+}
